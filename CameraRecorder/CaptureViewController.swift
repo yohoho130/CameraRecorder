@@ -207,15 +207,15 @@ class CaptureViewController: UIViewController {
 		// Recording video
 		if(self.isVideoRecording==false){
 			self.isVideoRecording=true
-//			let videoDelegate = VideoDelegate()
+			let videoDelegate = VideoDelegate()
 			self.videoFileOutput = AVCaptureMovieFileOutput()
 			self.captureSession.addOutput(self.videoFileOutput)
 			let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
 			let outputPath = "\(documentsPath)/Output.mov"
 			let outputFileUrl = NSURL(fileURLWithPath: outputPath)
+			self.videoFileOutput.startRecordingToOutputFileURL(outputFileUrl, recordingDelegate: videoDelegate)
 			
 			ALAssetsLibrary().writeVideoAtPathToSavedPhotosAlbum(outputFileUrl, completionBlock: nil)
-//			self.videoFileOutput.startRecordingToOutputFileURL(outputFileUrl, recordingDelegate: videoDelegate)
 			return
 		}
 		if(self.isVideoRecording==true){

@@ -56,8 +56,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JcE-3O-v6a">
-                        <barButtonItem key="backBarButtonItem" title="Capture You SAY" id="m1U-dD-nWq"/>
-                        <barButtonItem key="leftBarButtonItem" image="back" id="naa-dX-93S">
+                        <barButtonItem key="backBarButtonItem" image="back_3" style="done" id="m1U-dD-nWq"/>
+                        <barButtonItem key="leftBarButtonItem" image="back_3" id="naa-dX-93S">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="ic_camera_rear_white" id="g02-yr-6Oi">
@@ -97,7 +97,7 @@
     </scenes>
     <resources>
         <image name="CaptureDevice" width="1400" height="1798"/>
-        <image name="back" width="344" height="241"/>
+        <image name="back_3" width="24" height="24"/>
         <image name="ic_camera_rear_white" width="24" height="24"/>
         <image name="red_24" width="24" height="24"/>
     </resources>
