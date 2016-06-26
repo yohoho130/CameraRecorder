@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DFK-aL-Gov">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Capture View Controller-->
+        <scene sceneID="VYd-N2-uoU">
+            <objects>
+                <viewController id="wch-Bb-vNC" customClass="CaptureViewController" customModule="CameraRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KE0-TD-GJJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="l3q-s1-oEv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="center" id="g2L-PU-XwS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lf-mh-n9w">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CaptureDevice" translatesAutoresizingMaskIntoConstraints="NO" id="823-Xb-M2y">
+                                <rect key="frame" x="0.0" y="90" width="600" height="420"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izX-Ss-L9c">
+                                <rect key="frame" x="0.0" y="180" width="600" height="600"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <color key="tintColor" red="1" green="0.022105773299999999" blue="0.024894369060000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Record" image="red_24">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="record:" destination="wch-Bb-vNC" eventType="touchUpInside" id="7Ci-f5-0Mf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="823-Xb-M2y" firstAttribute="centerX" secondItem="g2L-PU-XwS" secondAttribute="centerX" id="2Eq-uW-jys"/>
+                            <constraint firstItem="823-Xb-M2y" firstAttribute="width" relation="lessThanOrEqual" secondItem="g2L-PU-XwS" secondAttribute="width" id="92d-XJ-G9O"/>
+                            <constraint firstItem="2lf-mh-n9w" firstAttribute="centerY" secondItem="g2L-PU-XwS" secondAttribute="centerY" id="AgY-6n-NdZ"/>
+                            <constraint firstItem="izX-Ss-L9c" firstAttribute="width" secondItem="g2L-PU-XwS" secondAttribute="width" id="Bb8-8Z-GJA"/>
+                            <constraint firstItem="izX-Ss-L9c" firstAttribute="centerY" secondItem="g2L-PU-XwS" secondAttribute="centerY" multiplier="1.6" id="HRo-2n-L5E"/>
+                            <constraint firstItem="izX-Ss-L9c" firstAttribute="top" relation="greaterThanOrEqual" secondItem="823-Xb-M2y" secondAttribute="bottom" multiplier="0.2" id="LXS-bm-6ht"/>
+                            <constraint firstItem="izX-Ss-L9c" firstAttribute="height" secondItem="g2L-PU-XwS" secondAttribute="height" id="MEu-9h-HaG"/>
+                            <constraint firstItem="izX-Ss-L9c" firstAttribute="centerX" secondItem="g2L-PU-XwS" secondAttribute="centerX" id="MPg-i2-hlQ"/>
+                            <constraint firstItem="823-Xb-M2y" firstAttribute="height" secondItem="g2L-PU-XwS" secondAttribute="height" multiplier="0.7" id="QL3-WO-koU"/>
+                            <constraint firstItem="823-Xb-M2y" firstAttribute="centerY" secondItem="g2L-PU-XwS" secondAttribute="centerY" id="TaV-a9-jRK"/>
+                            <constraint firstItem="2lf-mh-n9w" firstAttribute="width" secondItem="g2L-PU-XwS" secondAttribute="width" id="igE-n9-cal"/>
+                            <constraint firstItem="2lf-mh-n9w" firstAttribute="centerX" secondItem="g2L-PU-XwS" secondAttribute="centerX" id="qyG-eT-18M"/>
+                            <constraint firstItem="2lf-mh-n9w" firstAttribute="height" secondItem="g2L-PU-XwS" secondAttribute="height" id="vYL-ts-HFH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JcE-3O-v6a">
+                        <barButtonItem key="backBarButtonItem" title="Capture You SAY" id="m1U-dD-nWq"/>
+                        <barButtonItem key="leftBarButtonItem" image="back" id="naa-dX-93S">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ic_camera_rear_white" id="g02-yr-6Oi">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="changeCamera:" destination="wch-Bb-vNC" id="xsU-zG-08t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="camera" destination="2lf-mh-n9w" id="MkC-c5-G5o"/>
+                        <outlet property="captureDevice" destination="823-Xb-M2y" id="Bwx-JG-IXK"/>
+                        <outlet property="changeCameraButton" destination="g02-yr-6Oi" id="t9Y-Zh-zo6"/>
+                        <outlet property="recordButton" destination="izX-Ss-L9c" id="fnI-fh-7pC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uts-FB-n44" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zsu-JM-2QD">
+            <objects>
+                <navigationController id="DFK-aL-Gov" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O75-6s-R4W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wch-Bb-vNC" kind="relationship" relationship="rootViewController" id="kYv-BE-o7e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZ4-4D-oEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-296" y="374"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CaptureDevice" width="1400" height="1798"/>
+        <image name="back" width="344" height="241"/>
+        <image name="ic_camera_rear_white" width="24" height="24"/>
+        <image name="red_24" width="24" height="24"/>
+    </resources>
+</document>
